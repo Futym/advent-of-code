@@ -1,6 +1,6 @@
 floor = 0
 count=0
-file = open("Documents/AdventOfCode/2015/Day1/Day1.txt")
+file = open("Day1/Day1.txt")
 while True:
     c=file.read(1)
     count+=1
