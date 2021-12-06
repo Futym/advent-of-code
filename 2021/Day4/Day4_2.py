@@ -23,6 +23,7 @@ while(True):
     else:
         break
 for number in numbers:
+    toRemove=[]
     for board in tab:
         for row in board:
             for item in row:
@@ -37,26 +38,22 @@ for number in numbers:
                 if(len(tab)==1):
                     winPoints=countPoints(board,number)
                 else:
-                    tab.remove(board)
+                    toRemove.append(tab.index(board))
                 break
             if(board[0][itemindex]==board[1][itemindex]==board[2][itemindex]==board[3][itemindex]==board[4][itemindex]==-1):
                 if(len(tab)==1):
                     winPoints=countPoints(board,number)
                 else:
-                    tab.remove(board)
+                    toRemove.append(tab.index(board))
                 break
         
         if(winPoints!=0):
             break
     if(winPoints!=0):
         break
-
-                    
+    for item in toRemove:
+        tab.remove(tab[item])
+        for i in range(len(toRemove)):
+            toRemove[i]-=1
 
 print(winPoints)      
-                       
-
-
-
-
-    

@@ -31,12 +31,7 @@ for number in numbers:
                     itemindex=row.index(item)
                     rowIndex=board.index(row)
                     boardIndex=tab.index(board)
-                    print(tab[boardIndex][rowIndex][itemindex])
                     tab[boardIndex][rowIndex][itemindex]=-1
-                    print(tab[boardIndex][rowIndex][itemindex])
-                    print(item)
-                    print(board)
-                    print(tab[boardIndex])
 
                     if  row==[-1,-1,-1,-1,-1]:
                         winPoints=countPoints(board,number)
